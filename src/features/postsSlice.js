@@ -3,6 +3,7 @@ import {createSlice} from "@reduxjs/toolkit";
 const initialState = {
     posts: {
         "posts_by_date": {
+          
           "2021-06-17": [
             {
               "published_at": "2021-06-17 08:40:52",
