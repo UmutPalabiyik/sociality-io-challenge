@@ -1,0 +1,25 @@
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding-top: 1rem;
+  font-family: 'Raleway', sans-serif;
+ 
+  
+
+  &__container {
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+  }
+
+  &__label {
+    margin-left: 0.5rem;
+    font-weight: 500;
+  }
+}
