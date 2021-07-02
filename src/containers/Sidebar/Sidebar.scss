@@ -1,5 +1,82 @@
-.sidebar{
-    width: 275px;
-    height: 100vh;
-    background-color: #1D1D1D;
+.sidebar {
+  width: 275px;
+  height: 100vh;
+  background-color: #393D42;
+  font-family: "Raleway", sans-serif;
+
+  &__header {
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    color: #1e2225;
+    background: #31363B;
+    margin: 0;
+    padding: 0.3rem 0;
+
+    label{
+        font-weight: 400;
+    }
+  }
+
+  &__wrapper{
+      display: flex;
+      height: 100%;
+  }
+
+
+  &__accordion{
+      flex: 1;
+  }
+
+
+  &__brands{
+      width: 70px;
+      height: 100%;
+      background-color: #2A2F33;
+  }
+
+  &__content-box{
+      padding: 1rem 1rem;
+  }
+
+  &__row{
+      display: flex;
+      align-items: center;
+  }
+
+  &__label{
+      color: #ffff;
+      font-size: 14px;
+      margin-left: .5rem;
+      position: relative;
+
+      &::before{
+          content: "+";
+          color: #ffff;
+          position: absolute;
+          top: 50%;
+          left: 125px;
+          transform: translateY(50%);
+          font-size: 2.5em;
+      }
+
+      &--rounded{
+          border: .5px solid #73D9C7;
+          padding: 1px 2px;
+          border-radius: 4px;
+          font-size: 12px;
+          margin-left: .5rem;
+      }
+      
+  }
+
+  &__list{
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  &__item{
+      color: #ffff;
+      margin-top: .5rem;
+  }
 }
