@@ -16,8 +16,8 @@ const Home = () => {
      return(
         <div className="home">
             <Status/>
-            <PostsList day={day1} heading="2021-06-17"/>
-            <PostsList day={day2} heading="2021-07-01"/>
+            <PostsList day={day1} heading="2021-06-17" />
+            <PostsList day={day2} heading="2021-07-01" />
         </div>
     )
 }
