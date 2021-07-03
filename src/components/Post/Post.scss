@@ -6,7 +6,9 @@
 
   border-radius: 0.5rem;
   margin-right: 2rem;
+  margin-bottom: 1rem;
   background-color: #ffff;
+
 
   &__social {
     height: 100%;
@@ -19,8 +21,10 @@
     align-items: center;
 
     svg {
+      box-sizing: initial;
       width: 24px;
       height: 24px;
+      padding: 0 .25rem;
       color: #ffff;
     }
 
@@ -101,14 +105,39 @@
     width: 280px;
   }
 
-  &__icon-wrapper{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 0.5rem;
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
   }
 
-  &__label{
-      margin-left: 0.25rem;
+  &__label {
+    margin-left: 0.25rem;
+  }
+}
+
+/*  Media queries */
+
+@media screen and (max-width: 1620px) {
+  .post {
+    width: 300px;
+    height: 400px;
+
+    &__img {
+      height: 200px;
+      width: 230px;
+    }
+
+    &__container{
+      padding: .4rem;
+    }
+
+    &__social {
+      width: 30px;
+      height: 100%;
+    }
+
+
   }
 }

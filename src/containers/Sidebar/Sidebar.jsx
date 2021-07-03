@@ -10,7 +10,6 @@ import {
 } from "../../icons/Icons";
 import "./Sidebar.scss";
 
-import ReactDOM from "react-dom";
 import { useState } from "react";
 
 const contentBox = [
@@ -79,10 +78,9 @@ const Sidebar = () => {
 
   // handle accordion menu's open effect
   const handleClassName = (contentId) => {
-    
-    setShowContentIds((ids) => ({
-      ...ids,
-      [contentId]: !ids[contentId], // toggles boolean
+    setShowContentIds((prev) => ({
+      ...prev,
+      [contentId]: !prev[contentId],
     }));
   };
 
@@ -102,7 +100,7 @@ const Sidebar = () => {
               <div
                 id={brand.id}
                 className={
-                  "sidebar__brand " + brand.id === showBrandId ? "active" : ""
+                  `sidebar__brand ${brand.id === showBrandId ? "active" : ""}` 
                 }
                 onClick={() => handleBrandsIcon(brand.id)}
               >
@@ -128,23 +126,22 @@ const Sidebar = () => {
 
           {contentBox.map((content) => {
             const showContent = showContentIds[content.id];
-            console.log(showContent);
             return (
               <div
                 id={content.id}
-                className={`sidebar__content-box ${showContent ? "show" : ""}`}
+                className={"sidebar__content-box"}
                 onClick={() => handleClassName(content.id)}
               >
-                <div className="sidebar__row">
+                <div className={`sidebar__row   ${showContent ? "show" : ""}`}>
                   {content.icon}
                   <label className="sidebar__label">{content.label}</label>
+
                   {showContent ? (
-                    <MinusIcon className="sidebar__minus" />
+                    <MinusIcon className="sidebar__plus" />
                   ) : (
                     <PlusIcon className="sidebar__plus" />
                   )}
                 </div>
-
                 <ul className="sidebar__list">
                   <li className="sidebar__item">Compase</li>
                   <li className="sidebar__item">Feed</li>

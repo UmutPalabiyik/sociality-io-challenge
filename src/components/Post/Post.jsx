@@ -17,6 +17,17 @@ import {
 
 const Post = ({ state }) => {
   
+  // converting month to string
+  const date = new Date(state.published_at);
+  const dateWithMonthName =
+    date.getFullYear() +
+    "-" +
+    date.toLocaleString("en-EN", { month: "long" }) +
+    "-" +
+    date.getDay()
+
+
+
 
   // detect url from text
   const detectURL = () => {
@@ -84,7 +95,7 @@ const Post = ({ state }) => {
       <div className={`post__social post__social--${status}`}>{socialIcon}</div>
       <div className="post__container">
         <div className="post__heading">
-          <div className="post__date">{state.published_at}</div>
+          <div className="post__date">{dateWithMonthName}</div>
           {iconSet}
         </div>
         <div className="post__content">

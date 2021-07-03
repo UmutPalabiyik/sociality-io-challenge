@@ -10,12 +10,14 @@ const Home = () => {
 
 
     const {"2021-06-17": day1,"2021-07-01": day2 } = posts["posts_by_date"];
+    
 
-    return(
+
+     return(
         <div className="home">
             <Status/>
-            <PostsList day={day1}/>
-            <PostsList day={day2}/>
+            <PostsList day={day1} heading="2021-06-17"/>
+            <PostsList day={day2} heading="2021-07-01"/>
         </div>
     )
 }
