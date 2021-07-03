@@ -293,7 +293,7 @@ export const TwitterIcon = () => {
   );
 };
 
-export const NotificationIcon = () => {
+export const NotificationIcon = (props) => {
   return (
     <svg
       width="20"
@@ -318,7 +318,7 @@ export const NotificationIcon = () => {
   );
 };
 
-export const EngageIcon = () => {
+export const EngageIcon = ({className}) => {
   return (
     <svg
       width="20"
@@ -326,6 +326,7 @@ export const EngageIcon = () => {
       viewBox="0 0 20 17"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         fill-rule="evenodd"
@@ -337,7 +338,7 @@ export const EngageIcon = () => {
   );
 };
 
-export const ListenIcon = () => {
+export const ListenIcon = ({className}) => {
   return (
     <svg
       width="21"
@@ -345,6 +346,7 @@ export const ListenIcon = () => {
       viewBox="0 0 21 21"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         fill-rule="evenodd"
@@ -362,7 +364,7 @@ export const ListenIcon = () => {
   );
 };
 
-export const PublishIcon = () => {
+export const PublishIcon = ({className}) => {
   return (
     <svg
       width="20"
@@ -370,6 +372,7 @@ export const PublishIcon = () => {
       viewBox="0 0 20 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         fill-rule="evenodd"
@@ -381,7 +384,7 @@ export const PublishIcon = () => {
   );
 };
 
-export const ReportIcon = () => {
+export const ReportIcon = ({className}) => {
   return (
     <svg
       width="20"
@@ -389,6 +392,7 @@ export const ReportIcon = () => {
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         fill-rule="evenodd"
@@ -400,7 +404,7 @@ export const ReportIcon = () => {
   );
 };
 
-export const SummaryIcon = () => {
+export const SummaryIcon = ({className}) => {
   return (
     <svg
       width="22"
@@ -408,6 +412,7 @@ export const SummaryIcon = () => {
       viewBox="0 0 22 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         fill-rule="evenodd"
@@ -425,7 +430,7 @@ export const SummaryIcon = () => {
   );
 };
 
-export const PlusIcon = () => {
+export const PlusIcon = ({className}) => {
   return (
     <svg
       width="15"
@@ -433,6 +438,7 @@ export const PlusIcon = () => {
       viewBox="0 0 15 15"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         fill-rule="evenodd"
@@ -444,7 +450,7 @@ export const PlusIcon = () => {
   );
 };
 
-export const MinusIcon = () => {
+export const MinusIcon = ({className}) => {
   return (
     <svg
       width="12"
@@ -452,6 +458,7 @@ export const MinusIcon = () => {
       viewBox="0 0 12 1"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         fill-rule="evenodd"

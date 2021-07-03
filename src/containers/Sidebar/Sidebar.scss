@@ -1,7 +1,7 @@
 .sidebar {
   width: 275px;
   height: 100vh;
-  background-color: #393D42;
+  background-color: #393d42;
   font-family: "Raleway", sans-serif;
 
   &__header {
@@ -9,74 +9,146 @@
     font-size: 2rem;
     text-align: center;
     color: #1e2225;
-    background: #31363B;
+    background: #31363b;
     margin: 0;
     padding: 0.3rem 0;
 
-    label{
-        font-weight: 400;
+    label {
+      font-weight: 400;
     }
   }
 
-  &__wrapper{
-      display: flex;
+  &__wrapper {
+    display: flex;
+    height: 100%;
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+
+  &__accordion {
+    flex: 1;
+  }
+
+  &__brands {
+    width: 70px;
+    height: 100%;
+    padding-top: 0.25rem;
+    background-color: #2a2f33;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__brand {
+    margin: 0.5rem 0;
+    opacity: 0.3;
+    transition: all 0.2s;
+  }
+
+  .active {
+    opacity: 1;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -15px;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
       height: 100%;
+      width: 0.4rem;
+      background-color: red;
+    }
+  }
+
+  &__content-box {
+    cursor: pointer;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__label {
+    color: #ffff;
+    font-size: 14px;
+    margin-left: 0.5rem;
+    position: relative;
+    cursor: pointer;
+
+    &--rounded {
+      border: 0.5px solid #73d9c7;
+      padding: 1px 2px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__plus {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    margin-right: 1rem;
   }
 
 
-  &__accordion{
-      flex: 1;
+  &__minus {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    margin-right: 1rem;
   }
 
-
-  &__brands{
-      width: 70px;
-      height: 100%;
-      background-color: #2A2F33;
+  &__list {
+    display: none;
   }
 
-  &__content-box{
-      padding: 1rem 1rem;
+  &__row {
+    padding: 1rem 1rem;
   }
 
-  &__row{
-      display: flex;
-      align-items: center;
-  }
-
-  &__label{
-      color: #ffff;
-      font-size: 14px;
-      margin-left: .5rem;
+  .show {
+    background-color: #32363a;
+    .sidebar__row {
+      background: #f55661;
       position: relative;
 
-      &::before{
-          content: "+";
-          color: #ffff;
-          position: absolute;
-          top: 50%;
-          left: 125px;
-          transform: translateY(50%);
-          font-size: 2.5em;
+      &::before {
+        content: "";
+        position: absolute;
+        border-radius: 0.15rem;
+        height: 15px;
+        width: 15px;
+        background: #f55661;
+        bottom: 0;
+        left: 24px;
+        transform: translateY(50%) rotate(45deg);
       }
+    }
 
-      &--rounded{
-          border: .5px solid #73D9C7;
-          padding: 1px 2px;
-          border-radius: 4px;
-          font-size: 12px;
-          margin-left: .5rem;
+    .sidebar__icon {
+      path {
+        fill: #ffff;
       }
-      
+    }
+
+    .sidebar__list {
+      padding: 1rem 0 1rem 2.5rem;
+      display: block;
+    }
   }
 
-  &__list{
-    margin-left: 1.5rem;
-    margin-top: 1rem;
-  }
-
-  &__item{
-      color: #ffff;
-      margin-top: .5rem;
+  &__item {
+    color: #ffff;
+    margin-top: 0.5rem;
   }
 }

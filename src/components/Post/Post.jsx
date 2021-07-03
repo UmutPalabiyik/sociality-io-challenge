@@ -13,13 +13,21 @@ import {
   WatchIcon,
 } from "../../icons/Icons";
 
+
+
 const Post = ({ state }) => {
+  
 
   // detect url from text
   const detectURL = () => {
     let urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g;
     return state.entry.message.match(urlRegex);
   };
+
+  // change broken img
+  const handleBrokenImg = () => {
+    document.querySelector(".post__img").src = "./no-post-image.png";
+  }
 
   const status =
     state.status === 4
@@ -84,7 +92,7 @@ const Post = ({ state }) => {
               {state.entry.message.replace(detectURL()," ")}
             <a href={detectURL()}>{detectURL()}</a>
           </div>
-          <img className="post__img" src={state.entry.image[0]} alt="img" />
+          <img className="post__img" src={state.entry.image[0]} alt="img" onError={handleBrokenImg} />
           <div className="post__icons post__icons--bottom">
             {
               <>
